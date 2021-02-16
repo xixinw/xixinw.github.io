@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xixinw.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-02-16T04:53:59.648Z</updated>
+    <title>Xixin‘s blog</title>
+    <updated>2021-02-16T05:55:49.312Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xixinw.github.io"/>
     <link rel="self" href="https://xixinw.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>             金风玉露一相逢，便胜却人间无数。</subtitle>
     <logo>https://xixinw.github.io/images/avatar.png</logo>
     <icon>https://xixinw.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, Xixin‘s blog</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://xixinw.github.io/post/hello-gridea/</id>
