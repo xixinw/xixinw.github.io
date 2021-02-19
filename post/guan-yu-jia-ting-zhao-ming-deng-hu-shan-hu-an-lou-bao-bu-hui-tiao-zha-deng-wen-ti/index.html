@@ -1,113 +1,103 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题 | Xixin&#39;s blog
-</title>
-<link rel="shortcut icon" href="https://xixinw.github.io/favicon.ico?v=1613705052110">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题 | Xixin&#39;s blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://xixinw.github.io/favicon.ico?v=1613705096862">
 <link rel="stylesheet" href="https://xixinw.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://xixinw.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-        
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://xixinw.github.io">
-                <img class="avatar" src="https://xixinw.github.io/images/avatar.png?v=1613705052110" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    Xixin&#39;s blog
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="关于家庭照明灯忽闪忽暗
+家庭用电电流低是常见问题，在日常表现中有：开启大功率用电器时家里的灯会忽然暗一下，关闭后会恢复正常亮度，这通常是家里用电器突然增多，但总电压220V不变，用电器为了维持正常功率，从其他支路“借电”而导致的。  
+
+根..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://xixinw.github.io">
+        <img src="https://xixinw.github.io/images/avatar.png?v=1613705096862" class="site-logo">
+        <h1 class="site-title">Xixin&#39;s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+                   金风玉露一相逢，便胜却人间无数。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://xixinw.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2021-02-19</time>
-                            
-                        </div>
-                        
-                                <div class="post-content">
-                                    <h1 id="font-face黑体关于家庭照明灯忽闪忽暗"><font face="黑体">关于家庭照明灯忽闪忽暗</h1>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题</h2>
+            <div class="post-date">2021-02-19</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="font-face黑体关于家庭照明灯忽闪忽暗"><font face="黑体">关于家庭照明灯忽闪忽暗</h1>
 <pre><code>家庭用电电流低是常见问题，在日常表现中有：开启大功率用电器时家里的灯会忽然暗一下，关闭后会恢复正常亮度，这通常是家里用电器突然增多，但总电压220V不变，用电器为了维持正常功率，从其他支路“借电”而导致的。  
 
 根本原因来自于：  
@@ -135,95 +125,45 @@
 <h2 id="家庭用电切记安全排首位请勿选择质量不好的器件该省省该花花">家庭用电切记安全排首位，请勿选择质量不好的器件，该省省，该花花。</h2>
 <p>😀此文章来自xixinw的个人博客，转载请注明出处，关注我，定期更新电路知识。<a href="https://xixinw.github.io/">https://xixinw.github.io/</a></font></p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">
-                                <h3 class="post-title">
-                                    鹊桥仙·纤云弄巧 宋 · 秦观
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
-<li><a href="#font-face%E9%BB%91%E4%BD%93%E5%85%B3%E4%BA%8E%E5%AE%B6%E5%BA%AD%E7%85%A7%E6%98%8E%E7%81%AF%E5%BF%BD%E9%97%AA%E5%BF%BD%E6%9A%97"><font face="黑体">关于家庭照明灯忽闪忽暗</a></li>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%BC%8F%E4%BF%9D%E4%B8%8D%E4%BC%9A%E8%B7%B3%E9%97%B8">关于漏保不会跳闸</a>
-<ul>
-<li><a href="#%E5%AE%B6%E5%BA%AD%E7%94%A8%E7%94%B5%E5%88%87%E8%AE%B0%E5%AE%89%E5%85%A8%E6%8E%92%E9%A6%96%E4%BD%8D%E8%AF%B7%E5%8B%BF%E9%80%89%E6%8B%A9%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%A5%BD%E7%9A%84%E5%99%A8%E4%BB%B6%E8%AF%A5%E7%9C%81%E7%9C%81%E8%AF%A5%E8%8A%B1%E8%8A%B1">家庭用电切记安全排首位，请勿选择质量不好的器件，该省省，该花花。</a></li>
-</ul>
-</li>
-</ul>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">
+                  <h3 class="post-title">
+                    鹊桥仙·纤云弄巧 宋 · 秦观
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
+      </div>
     </div>
-    
-                            
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
+AOS.init();
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            </div>
-
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://xixinw.github.io/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-</body>
 
+
+
+
+  </body>
 </html>

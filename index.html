@@ -1,281 +1,180 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    Xixin&#39;s blog
-</title>
-<link rel="shortcut icon" href="https://xixinw.github.io/favicon.ico?v=1613705052110">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>Xixin&#39;s blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://xixinw.github.io/favicon.ico?v=1613705096862">
 <link rel="stylesheet" href="https://xixinw.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://xixinw.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://xixinw.github.io">
-                <img class="avatar" src="https://xixinw.github.io/images/avatar.png?v=1613705052110" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    Xixin&#39;s blog
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="             金风玉露一相逢，便胜却人间无数。">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://xixinw.github.io">
+        <img src="https://xixinw.github.io/images/avatar.png?v=1613705096862" class="site-logo">
+        <h1 class="site-title">Xixin&#39;s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+                   金风玉露一相逢，便胜却人间无数。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://xixinw.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://xixinw.github.io/post/guan-yu-jia-ting-zhao-ming-deng-hu-shan-hu-an-lou-bao-bu-hui-tiao-zha-deng-wen-ti/">
-                        关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2021-02-19</time>
-                    
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://xixinw.github.io/post/guan-yu-jia-ting-zhao-ming-deng-hu-shan-hu-an-lou-bao-bu-hui-tiao-zha-deng-wen-ti/">
+                  <h2 class="post-title">关于家庭照明灯忽闪忽暗、漏保不会跳闸等问题</h2>
+                </a>
+                <div class="post-date">
+                  2021-02-19
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            关于家庭照明灯忽闪忽暗
-家庭用电电流低是常见问题，在日常表现中有：开启大功率用电器时家里的灯会忽然暗一下，关闭后会恢复正常亮度，这通常是家里用电器突然增多，但总电压220V不变，用电器为了维持正常功率，从其他支路“借电”而导致的。  
-
-根本原因来自于：  
-
-1、电表到家里以及家里的总干线太细，平方数不够，流过的电流不足以支撑家庭用电总和。  
-解决方案：整体更换平方数较大也就是较粗的线即可，通常家庭用电平方数为10-16平方，推荐16平方。  
-
-2、灯具老化。  
-解决方案：更换灯泡即可。  
-
-3、输电总线用户过多，流过电流不足以支撑总用户用电，这种情况一般不会发生。  
-解决方案：报修国家电网（95598）  
-
-关于漏保不会跳闸
-漏报不会跳闸也是家庭用电常见问题，在日常中表现有：家里某地漏电，出现明显可见漏电现象，甚至插座进水导致严重漏电问题，但漏电保护器或漏电断路器依旧没有动作。
-
-根本原因及解决方案：  
-
-1、漏电保护器损坏，在通电情况下尝试按下漏电测试按钮后漏保依旧不跳闸，这种情况多是漏电保护器损坏。  
-解决方案：更换质量较好的漏电保护器例如正泰（CHNT）等。  
-
-2、漏电保护器安数过大，导致家庭漏电流没有达到漏保动作电流。  
-解决方案：更换适合家庭用电的漏保，不适宜太大，可根据家庭总线平方数选择，一般选择64-100A即可。  
-
-家庭用电切记安全排首位，请勿选择质量不好的器件，该省省，该花花。
-😀此文章来自xixinw的个人博客，转载请注明出处，关注我，定期更新电路知识。https://xixinw.github.io/
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://xixinw.github.io/post/guan-yu-jia-ting-zhao-ming-deng-hu-shan-hu-an-lou-bao-bu-hui-tiao-zha-deng-wen-ti/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">
-                        鹊桥仙·纤云弄巧 宋 · 秦观
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2021-02-16</time>
-                    
-                        <a href="https://xixinw.github.io/tag/GiUib-DZB/" class="post-tag i-tag
-                            i-tag-success">
-            #xixinw
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">
+                  <h2 class="post-title">鹊桥仙·纤云弄巧 宋 · 秦观</h2>
+                </a>
+                <div class="post-date">
+                  2021-02-16
                 </div>
-                <div class="post-article">
-                    
-                        <a href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/" class="post-feature-image" style="background-image:url(https://xixinw.github.io/post-images/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            鹊桥仙·纤云弄巧 宋 · 秦观
-纤云弄巧，飞星传恨，银汉迢迢暗度。
-金风玉露一相逢，便胜却人间无数。
-柔情似水，佳期如梦，忍顾鹊桥归路。
-两情若是久长时，又岂在朝朝暮暮。
-😀
-
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
+                <a class="right" href="https://xixinw.github.io/post/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan/">
+                  <div class="feature-container" style="background-image: url('https://xixinw.github.io/post-images/que-qiao-xian-xian-yun-nong-qiao-song-qin-guan.jpg')">
+                  </div>
+                </a>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://xixinw.github.io/post/hello-gridea/">
-                        Hello Gridea
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2018-12-12</time>
-                    
-                        <a href="https://xixinw.github.io/tag/A0no1cw1S/" class="post-tag i-tag
-                            i-tag-success">
-            #Gridea
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://xixinw.github.io/post/hello-gridea/">
+                  <h2 class="post-title">Hello Gridea</h2>
+                </a>
+                <div class="post-date">
+                  2018-12-12
                 </div>
-                <div class="post-article">
-                    
-                        <a href="https://xixinw.github.io/post/hello-gridea/" class="post-feature-image" style="background-image:url(https://xixinw.github.io/post-images/hello-gridea.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+                <div class="post-abstract">
+                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://xixinw.github.io/post/hello-gridea/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
+                <a class="right" href="https://xixinw.github.io/post/hello-gridea/">
+                  <div class="feature-container" style="background-image: url('https://xixinw.github.io/post-images/hello-gridea.png')">
+                  </div>
+                </a>
+              
             </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
+          
 
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://xixinw.github.io/images/avatar.png?v=1613705052110)">
-        </div>
-        <h1 class="id_card-title">
-            Xixin&#39;s blog
-        </h1>
-        <h2 class="id_card-description">
-                         金风玉露一相逢，便胜却人间无数。
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
-    </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://xixinw.github.io/atom.xml" target="_blank">RSS</a>
+          <div class="pagination-container">
+  
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+
+
+
+
+  </body>
 </html>
